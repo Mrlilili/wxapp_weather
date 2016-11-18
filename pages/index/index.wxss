@@ -1,21 +1,14 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
+@import 'weather.wxss';
+page{
+	height: 100%;
+	width: 100%;
+	
+	}
+.container {
+	/*background: -webkit-gradient(linear, left top, right top, from(#00BBFF), color-stop(14.3%, #00BBFF), color-stop(14.3%, #2EB5E5), color-stop(28.6%, #2EB5E5), color-stop(28.6%, #E6E6E6), color-stop(42.9%, #E6E6E6), color-stop(42.9%, #F3D166), color-stop(57.2%, #F3D166), color-stop(57.2%, #222233), color-stop(71.5%, #222233), color-stop(71.5%, #444444), color-stop(85.8%, #444444), color-stop(85.8%, #85DB8C));*/
+	
+	height: 100%;
+	width: 100%;
+	background: #00BBFF;
+	padding-top: 10%;
 }

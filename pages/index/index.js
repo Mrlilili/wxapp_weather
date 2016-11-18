@@ -3,24 +3,34 @@
 var app = getApp()
 Page({
   data: {
-    motto: 'weather app',
-    userInfo: {}
-  },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+    locationInfo: {},
+    weatherData: null
   },
   onLoad: function () {
-    console.log('onLoad')
-    var that = this
-    //调用应用实例的方法获取全局数据
-    app.getUserInfo(function(userInfo){
-      //更新数据
-      that.setData({
-        userInfo:userInfo
+    console.log('onload');
+    var self = this;
+    app.getLocationInfo(function (locationInfo) {
+      self.setData({
+        locationInfo: locationInfo
       })
+      self.getWeatherData();
+    })
+    wx.setNavigationBarTitle({
+      title: '实时天气预报'
+    })
+  },
+  getWeatherData: function () {
+    var self = this;
+    var APIKEY = 'TAkhjf8d1nlSlspN';
+    var location = this.data.locationInfo.longitude + ',' + this.data.locationInfo.latitude;
+    var reqUrl = 'https://api.caiyunapp.com/v2/' + APIKEY + '/' + location + '/realtime.json'
+    wx.request({
+      url: reqUrl,
+      success: function (res) {
+        self.setData({
+          weatherData: res
+        });
+      }
     })
   }
 })
