@@ -1,20 +1,71 @@
-@import 'weather.wxss';
-page{
-	height: 100%;
-	width: 100%;
-	
-	}
-.container {
-	/*background: -webkit-gradient(linear, left top, right top, from(#00BBFF), color-stop(14.3%, #00BBFF), color-stop(14.3%, #2EB5E5), color-stop(28.6%, #2EB5E5), color-stop(28.6%, #E6E6E6), color-stop(42.9%, #E6E6E6), color-stop(42.9%, #F3D166), color-stop(57.2%, #F3D166), color-stop(57.2%, #222233), color-stop(71.5%, #222233), color-stop(71.5%, #444444), color-stop(85.8%, #444444), color-stop(85.8%, #85DB8C));*/
-	height: 100%;
-	width: 100%;
-	background: #00BBFF;
-	padding-top: 10%;
-}
-.container.RAIN{
-background: #E6E6E6;
+.city {
+    padding: 3% 5%;
+    background: #ddd;
 }
 
-.ex{
-	background: -webkit-gradient(linear, left top, right top, from(#00BBFF), color-stop(14.3%, #00BBFF), color-stop(14.3%, #2EB5E5), color-stop(28.6%, #2EB5E5), color-stop(28.6%, #E6E6E6), color-stop(42.9%, #E6E6E6), color-stop(42.9%, #F3D166), color-stop(57.2%, #F3D166), color-stop(57.2%, #222233), color-stop(71.5%, #222233), color-stop(71.5%, #444444), color-stop(85.8%, #444444), color-stop(85.8%, #85DB8C));
+.city text {
+    font-size: 16px;
+    color: #666;
+    background: url('../../images/curcity.png') no-repeat;
+    background-size: auto 100%;
+    padding-left: 20px;
+}
+
+.city .update {
+    font-size: 12px;
+    float: right;
+    background: url('../../images/update.png') no-repeat;
+    background-size: auto 100%;
+}
+
+.weather {
+    padding: 5%;
+    background: #cef;
+    overflow: hidden;
+    color: #58b;
+
+}
+
+.weather .section {
+    display: block;
+    height: 100px;
+    width: 100px;
+    float: left;
+}
+
+.weather .aside {
+    float: right;
+    font-size: 12px;
+    margin-top: 5%;
+}
+
+.weather .aside .temperature {
+    font-size: 42px;
+    display: block;
+
+}
+
+.weather .other {
+    clear: both;
+    padding-top: 5%;
+    display: flex;
+}
+
+.weather .other view {
+    flex: 1;
+    text-align: center;
+}
+
+.weather .other .border_r {
+    border-right: solid 1px #bbd;
+}
+
+.weather .other .title {
+    font-size: 12px;
+    color: #bbd;
+}
+
+.weather .other .info {
+    display: block;
+    padding-top: 5%;
 }

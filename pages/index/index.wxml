@@ -1,6 +1,29 @@
 <view class="container">
-  <view class="weather-box">
-    <view class="{{weatherData.skycon}}"></view>
-  </view>
+    <view class="city">
+        <text>当前城市：{{baseInfo.city}}</text>
+        <text class="update">{{baseInfo.update.loc}}</text>
+    </view>
+    <view class="weather">
+        <image class="section" src="http://files.heweather.com/cond_icon/{{weatherData.cond.code}}.png"></image>
+        <view class="aside">
+            <text class="temperature">{{weatherData.tmp}}℃</text>
+            <text>{{weatherData.cond.txt}} | {{weatherData.wind.dir}}{{weatherData.wind.sc}}级</text>
+        </view>
+        <view class="other">
+            <view class="border_r">
+                <text class="title">相对湿度</text>
+                <text class="info">{{weatherData.hum}}%</text>
+            </view>
+            <view class="border_r">
+                <text class="title">降水量</text>
+                <text class="info">{{weatherData.pcpn}}mm</text>
+            </view>
+            <view>
+                <text class="title">能见度</text>
+                <text class="info">{{weatherData.vis}}KM</text>
+            </view>
+        </view>
+    </view>
+    <view class="suggestion"></view>
 </view>
 
