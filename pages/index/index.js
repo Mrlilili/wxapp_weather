@@ -7,7 +7,6 @@ Page({
     weatherData: null
   },
   onLoad: function () {
-    console.log('onload');
     var self = this;
     app.getLocationInfo(function (locationInfo) {
       self.setData({
@@ -27,9 +26,11 @@ Page({
     wx.request({
       url: reqUrl,
       success: function (res) {
+        
         self.setData({
-          weatherData: res
+          weatherData: res.data.result
         });
+        console.log(self.data.weatherData);
       }
     })
   }

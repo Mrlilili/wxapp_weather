@@ -1,31 +1,6 @@
 <view class="container">
   <view class="weather-box">
-    <!-- 晴天 -->
-    <view class="sunny"></view>
-  </view>
-  <view class="weather-box">
-    <!-- 多云 -->
-    <view class="cloudy"></view>
-  </view>
-  <view class="weather-box">
-    <!-- 雨天 -->
-    <view class="rainy"></view>
-  </view>
-  <view class="weather-box">
-    <!-- 雪天 -->
-    <view class="snowy"></view>
-  </view>
-  <view class="weather-box">
-    <!-- 彩虹 -->
-    <view class="rainbow"></view>
-  </view>
-  <view class="weather-box">
-    <!-- 星空 -->
-    <view class="starry"></view>
-  </view>
-  <view class="weather-box">
-    <!-- 暴雨 -->
-    <view class="stormy"></view>
+    <view class="{{weatherData.skycon}}"></view>
   </view>
 </view>
 
