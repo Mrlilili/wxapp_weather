@@ -4,7 +4,8 @@
         <text class="update">{{baseInfo.update.loc}}</text>
     </view>
     <view class="weather">
-        <image class="section" src="http://files.heweather.com/cond_icon/{{weatherData.cond.code}}.png"></image>
+
+        <image wx:if="{{weatherData!=null}}" class="section" src="http://files.heweather.com/cond_icon/{{weatherData.cond.code}}.png"></image>
         <view class="aside">
             <text class="temperature">{{weatherData.tmp}}℃</text>
             <text>{{weatherData.cond.txt}} | {{weatherData.wind.dir}}{{weatherData.wind.sc}}级</text>
@@ -24,6 +25,18 @@
             </view>
         </view>
     </view>
-    <view class="suggestion"></view>
+    <view class="suggestion">
+        <text class="title">生活指数</text>
+        <view class="list" wx:for="{{lifeIndex}}" wx:key="{{*this}}">
+            <view class="list_l">
+                <image src="../../images/icon/{{item.name}}.png"></image>
+                <text>{{suggestionName[item.name]}}</text>
+            </view>
+            <view class="list_r">
+                <text class="list_t">{{item.brf}}</text>
+                <text>{{item.txt}}</text>
+            </view>
+        </view>
+    </view>
 </view>
 

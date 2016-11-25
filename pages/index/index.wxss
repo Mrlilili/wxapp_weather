@@ -14,6 +14,7 @@
 .city .update {
     font-size: 12px;
     float: right;
+    margin-top:5px;
     background: url('../../images/update.png') no-repeat;
     background-size: auto 100%;
 }
@@ -63,9 +64,50 @@
 .weather .other .title {
     font-size: 12px;
     color: #bbd;
+
 }
 
 .weather .other .info {
     display: block;
     padding-top: 5%;
+}
+.suggestion .title{
+    display: block;
+    padding: 3% 5%;
+    background: #5588bb;
+    color: #fff;
+}
+
+.suggestion .list{
+    display: flex;
+    font-size: 12px;
+    margin-top:1px;
+}
+
+.suggestion .list_l{
+    flex: 1;
+    text-align: center;
+    background: #cef;
+    color: #bbd;
+    padding: 8px;
+}
+.suggestion .list_l image{
+    display: block;
+    margin: 0 auto;
+    height: 30px;
+    width: 30px;
+
+}
+.suggestion .list_r{
+    flex: 4;
+    padding: 8px;
+    background: #eee;
+    color: #aaa;
+
+}
+.suggestion .list_r .list_t{
+    display: block;
+    font-size: 16px;
+    margin-bottom:5px;
+    color: #333;
 }

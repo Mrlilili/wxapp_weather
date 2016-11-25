@@ -1,0 +1,24 @@
+<view class="container">
+
+    <text class="title">地区选择器</text>
+
+    <picker mode="selector" bindchange="bindShengChange" value="{{shengIndex}}" range="{{shengRange}}">
+        <view class="picker">
+            当前选择省:{{shengRange[shengIndex]}}
+        </view>
+    </picker>
+    <picker mode="selector" bindchange="bindShiChange" value="{{shiIndex}}" range="{{shiRange}}">
+        <view class="picker">
+            当前选择市:{{shi[shiIndex].leaderZh}}
+        </view>
+    </picker>
+    <picker mode="selector" bindchange="bindQuChange" value="{{quIndex}}" range="{{quRange}}">
+        <view class="picker">
+            当前选择区:{{qu[quIndex].cityZh}}
+        </view>
+    </picker>
+    <view class="btn-box">
+        <button type="primary" bindtap="returnView">确认设置并查看</button>
+    </view>
+
+</view>

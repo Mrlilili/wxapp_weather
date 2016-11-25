@@ -1,12 +1,32 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/setCity/setCity"
+
+
+    
+    
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "black",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"#fff"
+  },
+  "tabBar":{
+    "list":[
+      {
+        "iconPath":"images/tabbar/weather1.png",
+        "selectedIconPath":"images/tabbar/weather2.png",
+        "pagePath":"pages/index/index",
+        "text":"当前天气"
+      },
+      {
+        "iconPath":"images/tabbar/city1.png",
+        "selectedIconPath":"images/tabbar/city2.png",
+        "pagePath":"pages/setCity/setCity",
+        "text":"设置城市"
+      }
+    ]
   }
 }
